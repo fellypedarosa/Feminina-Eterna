@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Inicial - Feminina Eterna</title>
+    <link rel="icon" href="img/Amazony-Logo-Rosa.png">
+    <!-- Link para a fonte More Sugar -->
+    <style>
+        @font-face {
+            font-family: 'More Sugar';
+            src: url('MoreSugar-Regular.ttf');
+        }
+        body {
+            background-color: #D8BFD8; /* Cor lilás */
+            margin: 0;
+            font-family: 'More Sugar', sans-serif; /* Altere a fonte aqui */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden; /* Impede a rolagem horizontal */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Os elementos serão empilhados verticalmente */
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .btn--action {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            background-color: #C8A2C8;
+            color: #fcfcfc;
+            transition: all .5s ease 0s;
+            box-shadow: 0 10px #804080;
+            width:35%; /* Define a largura automaticamente com base no conteúdo */
+            max-width: 400px; /* Define a largura máxima para evitar que os botões preencham toda a tela */
+            margin-bottom: 20px; /* Adiciona margem inferior para espaçamento entre os botões */
+            z-index: 1000;
+        }
+
+        .btn--action span {
+            display: inline-block;
+            position: relative;
+            transition: all .5s ease;
+        }
+
+        .btn--action span:before {
+            font-size: 1rem;
+            font-family: FontAwesome;
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 1.5rem;
+            opacity: 0;
+            transition: all .1s ease 0s;
+        }
+
+        .btn--action:hover span {
+            padding-left: 1.5rem;
+        }
+
+        .btn--action:hover span:before {
+            left: 0;
+            opacity: 1;
+        }
+
+        .btn--action:active {
+            box-shadow: 0 5px #C8A2C8;
+            transform: translateY(5px);
+        }
+
+        .wave {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 150px;
+            background-position: bottom;
+            background-repeat: repeat-x;
+            transform-origin: center bottom;
+        }
+
+        @keyframes waves {
+            0% {
+                transform: translateX(0) translateZ(0) scaleY(1);
+            }
+            50% {
+                transform: translateX(-25%) translateZ(0) scaleY(0.5);
+            }
+            100% {
+                transform: translateX(-50%) translateZ(0) scaleY(1);
+            }
+        }
+        .welcome-message {
+            font-family: 'More sugar', sans-serif;
+            background-color: #ffd90000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 40px; /* Adiciona margem inferior para espaçamento entre o texto e os botões */
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ajuste o valor de z-index para garantir que o botão fique acima das ondas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            border-radius: 50%; /* Borda arredondada */
+            overflow: visible; /* Permitir que o conteúdo ultrapasse os limites do botão */
+            padding: 10px; /* Espaçamento interno para a mensagem */
+            
+        }
+
+        .whatsapp-button img {
+            width: 60px; /* Tamanho do ícone */
+            height: 60px;
+            display: block;
+            position: relative; /* Garante que o ícone fique sobre a mensagem */
+            z-index: 1; /* Garante que o ícone fique sobre a mensagem */
+        }
+
+        .whatsapp-button .message {
+            position: absolute;
+            right: 100%; /* Posição inicial na mesma posição do botão do WhatsApp, mas atrás dele */
+            top: 50%;
+            display: none;
+            transform: translate(-50%, -50%);
+            font-family: 'More sugar', sans-serif; /* Fonte */
+            font-size: 16px;
+            color: white;
+            white-space: nowrap; /* Para que a mensagem não quebre em várias linhas */
+            animation: slideIn 5s infinite;
+            z-index: 0; /* Garante que a mensagem fique atrás do ícone */
+            font-size:15px;
+        }
+
+        @keyframes slideIn {
+            0%, 100% {
+                right: calc(100% + -200px); /* Fora do botão */
+                opacity: 0; /* Invisível */
+            }
+            10%, 90% {
+                right: calc(100% - 110px); /* Posição do botão */
+                opacity: 1; /* Visível */
+            }
+            95% {
+                right: calc(100% - 180px); /* Afastado do botão */
+                opacity: 0; /* Torna-se invisível */
+            }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1743234526204510');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1743234526204510&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body style="padding: 8px; margin: 0px;">
+    <div class="welcome-message" style="color: #ffffff; background-color: #D8BFD8; padding: 20px; font-size:20px; text-align: center;">
+        <br>
+        Olá, Maravilhosa! Que bom que você está aqui! 🌸<br>
+        Dê uma olhadinha na nossa página da Rosa Amazônica aqui embaixo e confira também nossos eBooks. Aproveite! Beijos
+    </div>
+    <div class="container">
+        <a href="Rosa-Amazonica.html" class="btn btn--action"><span>ROSA AMAZÔNICA</span></a><br>
+
+        <a href="https://wa.me/message/4I65DWC2BQ7GI1" class="btn btn--action"><span>EBOOKS PERFEITOS</span></a><br>
+        
+        
+    </div>
+    <div style="position: relative; background-color: rgba(130, 10, 177, 0); overflow: hidden; height: 150px;">
+        <div class="wave" style="background-image: url('img/waves.png'); background-size: 50% 75px; animation: waves 4s linear infinite; opacity: 1; z-index: 10; filter: hue-rotate(0deg);"></div>
+        <div class="wave" style="background-image: url('img/waves.png'); background-size: 50% 75px; animation: waves 7s linear infinite; opacity: 0.75; z-index: 11; filter: hue-rotate(0deg);"></div>
+        <div class="wave" style="background-image: url('img/waves.png'); background-size: 50% 75px; animation: waves 10s linear infinite; opacity: 0.5; z-index: 10; filter: hue-rotate(0deg);"></div>
+    </div>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/message/4I65DWC2BQ7GI1" target="_blank">
+            <img src="img/wpp.png" alt="WhatsApp">
+            <div id="whatsapp-message" class="message">Ei, me chama no WhatsApp! 📲💬</div>
+        </a>
+    </div>
+    <script>
+        var message = document.getElementById('whatsapp-message');
+        var showAfter = 5000; 
+        var hideAfter = 5000; 
+        var showAgainAfter = 100000; 
+        
+        function showMessage() {
+            message.style.display = 'block';
+            setTimeout(function() {
+                message.style.display = 'none';
+            }, hideAfter);
+        }
+        
+        setTimeout(function() {
+            showMessage();
+            setInterval(showMessage, showAgainAfter);
+        }, showAfter);
+    </script>
+</body>
+</html>
